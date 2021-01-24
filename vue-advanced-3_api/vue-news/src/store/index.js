@@ -5,7 +5,8 @@ import actions from "./actions";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
+	// export default new Vuex.Store({
 	state: {
 		news: [],
 		ask: [],
@@ -14,6 +15,12 @@ export default new Vuex.Store({
 	getters: {
 		fetchedAsk(state) {
 			return state.ask;
+		},
+		fetchedJobs(state) {
+			return state.jobs;
+		},
+		fetchedNews(state) {
+			return state.news;
 		},
 	},
 	mutations,
